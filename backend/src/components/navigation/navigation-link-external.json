@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_navigation_link_externals",
+  "info": {
+    "displayName": "Externí odkaz",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

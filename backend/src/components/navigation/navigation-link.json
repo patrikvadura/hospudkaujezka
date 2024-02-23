@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navigation_navigation_links",
+  "info": {
+    "displayName": "Položka navigace",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

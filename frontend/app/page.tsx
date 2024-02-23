@@ -1,43 +1,42 @@
-"use client";
-import {Card, CardHeader, CardFooter, Image, Link, Button} from "@nextui-org/react";
-import { Icon } from '@iconify/react';
-import { getPosts, Post } from './lib/api';
+import React from "react";
+
+import { getPost } from "@/app/lib/api";
+import { Card, CardHeader, Image, Link } from "@nextui-org/react";
 
 export default async function Home() {
-    const posts: Post[] = await getPosts();
+    const response = await getPost(undefined,['coverImage']);
+    const posts = response.data;
+
+    const backendPath:string|undefined = process.env.NEXT_PUBLIC_API;
 
     return (
-        <main className="prose w-full py-10 px-5 mx-auto">
+        <main className="container">
 
             <h1 className="text-3xl font-bold">Posts</h1>
 
-            <div className="grid grid-cols-3">
-                {posts.map((post: Post) => {
+            <div className="grid grid-cols-3 gap-4">
+                {posts.map((post: any) => {
                     return (
                         <div key={post.id} className="p-4">
-                            <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
-                                <CardHeader className="absolute z-10 top-0 flex-col items-start px-4 py-6">
-                                    <h4 className="text-white/90 font-medium text-xl">
-                                        {post.title}
-                                    </h4>
-                                </CardHeader>
+                            <Link href={`/posts/${post.attributes.slug}`} className="flex flex-col ">
+                                <Card className="col-span-12 sm:col-span-4 h-[300px]">
+                                    <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+                                        <h4 className="text-white font-medium text-xl">
+                                            {post.attributes.title}
+                                        </h4>
+                                    </CardHeader>
 
-                                {post.coverImage && (
-                                    <Image
-                                        removeWrapper
-                                        alt={post.title}
-                                        className="z-0 w-full h-full object-cover"
-                                        src={post.coverImage.url}
-                                        isZoomed
-                                    />
-                                )}
-
-                                <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-                                    <Button href={`/posts/${post.slug}`} as={Link} color="primary" variant="bordered" radius="full" size="sm" startContent={<Icon icon="lucide:bed-double" />}>
-                                        Více informací
-                                    </Button>
-                                </CardFooter>
-                            </Card>
+                                    {post.attributes.coverImage && (
+                                        <Image
+                                            removeWrapper
+                                            alt={post.attributes.title}
+                                            className="z-0 w-full h-full object-cover"
+                                            src={backendPath + post.attributes.coverImage.data.attributes.url}
+                                            isZoomed
+                                        />
+                                    )}
+                                </Card>
+                            </Link>
                         </div>
                     );
                 })}

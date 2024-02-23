@@ -28,9 +28,9 @@ export function ThemeSwitcher() {
                 variant="light"
                 aria-label="Změna tématu">
                 {theme === "dark" ? (
-                    <Icon icon="lucide:sun" className="text-lg" />
+                    <Icon icon="lucide:sun" className="text-secondary text-lg" />
                 ) : (
-                    <Icon icon="lucide:moon" className="text-lg" />
+                    <Icon icon="lucide:moon" className="text-secondary text-lg" />
                 )}
             </Button>
         </div>

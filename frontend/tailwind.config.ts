@@ -38,17 +38,25 @@ const config: Config = {
         light: {
           colors: {
             primary: {
-              DEFAULT: "#BEF264",
-              foreground: "#000000",
+              DEFAULT: "#024940",
+              foreground: "#f8fbef",
             },
+            secondary: {
+              DEFAULT: "#f8fbef",
+              foreground: "#024940",
+            }
           },
         },
         dark: {
           colors: {
             primary: {
-              DEFAULT: "#BEF264",
-              foreground: "#000000",
+              DEFAULT: "#f8fbef",
+              foreground: "#024940",
             },
+            secondary: {
+              DEFAULT: "#024940",
+              foreground: "#f8fbef",
+            }
           },
         },
       },
