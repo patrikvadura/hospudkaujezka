@@ -13,6 +13,11 @@ const config: Config = {
       center: true,
     },
     extend: {
+      colors: {
+        red: {
+          800: "#5c050c",
+        }
+      },
     },
   },
   darkMode: "class",
@@ -56,7 +61,7 @@ const config: Config = {
             secondary: {
               DEFAULT: "#024940",
               foreground: "#f8fbef",
-            }
+            },
           },
         },
       },

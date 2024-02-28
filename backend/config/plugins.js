@@ -1,5 +1,4 @@
-module.exports = {
-  //
+module.exports = ({ env }) => ({
   graphql: {
     config: {
       endpoint: '/graphql',
@@ -12,4 +11,20 @@ module.exports = {
       },
     },
   },
-};
+  email: {
+    provider: 'nodemailer',
+    providerOptions: {
+      host: env('SMTP_HOST', 'smtp.gmail.com'),
+      port: env('SMTP_PORT', 465),
+      secure: true,
+      auth: {
+        user: env('SMTP_USERNAME'),
+        pass: env('SMTP_PASSWORD'),
+      },
+    },
+    settings: {
+      defaultFrom: env('SMTP_FROM'),
+      defaultReplyTo: env('SMTP_REPLYTO'),
+    },
+  },
+});
