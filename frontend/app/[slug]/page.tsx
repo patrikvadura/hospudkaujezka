@@ -34,14 +34,14 @@ export default async function Page(props: ParamsProps) {
     if (pageData.data.length === 0) return null;
 
     return (
-        <main className="container">
-            <h1 className="text-3xl font-bold">
+        <main className="container pt-16">
+            <h1 className="text-h1 text-primary">
                 {pageData.data[0].attributes.title}
             </h1>
 
-            <div>
+            <article className="prose max-w-none dark:prose-invert">
                 {renderContent(pageDataContent)}
-            </div>
+            </article>
         </main>
     );
 }

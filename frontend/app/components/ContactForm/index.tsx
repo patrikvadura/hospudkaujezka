@@ -61,7 +61,7 @@ export default function ContactForm() {
     return (
         <form onSubmit={ handleSubmit }>
             <div className="grid gap-y-8">
-                <div className="grid grid-cols-2 gap-x-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4">
                     <Input
                         isRequired
                         id="name"
@@ -100,7 +100,7 @@ export default function ContactForm() {
                     />
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-4 items-end">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-0 md:gap-x-4 items-end">
                     <Select
                         label="Zvolte kategorii rezervace"
                         variant="underlined"

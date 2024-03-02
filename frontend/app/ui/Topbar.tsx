@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export default function TopBar() {
     return (
-        <div className="container px-4 flex flex-row justify-end items-center h-20 w-full space-x-4">
+        <div className="container z-20 px-4 flex flex-row justify-end items-center h-20 w-full space-x-4">
             <Link
                 href=""
                 className="text-primary text-3xl">
