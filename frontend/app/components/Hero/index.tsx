@@ -66,7 +66,7 @@ export default function Home() {
             <Image
                 removeWrapper
                 alt="Pilsner Urquell"
-                className="pilsnerBeer absolute top-0 right-0 z-0 size-[200px] md:size-[500px] backdrop-filter blur-sm !opacity-90"
+                className="pilsnerBeer absolute top-0 right-0 z-0 size-[200px] md:size-[500px] backdrop-filter blur-[2px]"
                 ref={pilsnerBeer01}
                 src="/images/pilsner-urquell/pilsner-urquell_01.png"
                 isZoomed
