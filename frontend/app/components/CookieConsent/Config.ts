@@ -101,8 +101,7 @@ const getConfig = () => {
                         showPreferencesBtn: 'Nastavení cookies',
                         // closeIconLabel: 'Reject all and close modal',
                         footer: `
-                        <a href="#path-to-impressum.html" target="_blank">Impressum</a>
-                        <a href="#path-to-privacy-policy.html" target="_blank">Privacy Policy</a>
+                        <a href="/privacy-policy" target="_blank">Privacy Policy</a>
                     `,
                     },
                     preferencesModal: {
@@ -187,7 +186,7 @@ const getConfig = () => {
                             {
                                 title: 'Více o cookies',
                                 description:
-                                    'Pro více informací o cookies a ochraně soukromí se na nás neváhejte obrátit: <a href="#contact">Kontakt</a>',
+                                    'Pro více informací o cookies a ochraně soukromí: <a href="/privacy-policy" target="_blank">Privacy Policy</a>',
                             },
                         ],
                     },

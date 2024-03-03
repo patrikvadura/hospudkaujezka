@@ -111,10 +111,12 @@ const config: Config = {
             primary: {
               DEFAULT: "#024940",
               foreground: "#f8fbef",
+              500: "#0a3832",
             },
             secondary: {
               DEFAULT: "#f8fbef",
               foreground: "#024940",
+              500: "#edefe4"
             }
           },
         },
@@ -123,10 +125,13 @@ const config: Config = {
             primary: {
               DEFAULT: "#f8fbef",
               foreground: "#024940",
+              500: "#edefe4"
+
             },
             secondary: {
               DEFAULT: "#024940",
               foreground: "#f8fbef",
+              500: "#0a3832",
             },
           },
         },
