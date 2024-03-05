@@ -1,2 +1,7 @@
+# netlify.toml
+[build]
+base = "frontend"
+command = "next build"
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"
