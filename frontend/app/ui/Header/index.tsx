@@ -76,7 +76,7 @@ export default function Header() {
             <NavbarMenu className="flex flex-col justify-center items-center">
                 {pages.map((page: any) => {
                     return (
-                        <NavbarMenuItem>
+                        <NavbarMenuItem key={page.id}>
                             <Link
                                 href={`/${page.attributes.slug}`}
                                 className="!text-h3 !font-bold text-primary">

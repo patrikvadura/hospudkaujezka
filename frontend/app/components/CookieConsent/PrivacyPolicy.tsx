@@ -71,7 +71,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ pageData }) => (
 
         <article className="prose max-w-none dark:prose-invert">
             <p>
-                Naše společnost { pageData.attributes.name }, se sídlem na adrese { pageData.attributes.address }, IČO { pageData.attributes.vat } (dále jen "my"), využívá soubory cookie pro zajištění hladkého fungování a zlepšení našich internetových stránek. Cílem tohoto dokumentu, nazvaného "Zásady používání souborů cookie" (dále jen "zásady"), je poskytnout vám informace o tom, jak s těmito soubory nakládáme, včetně zpracování osobních údajů, a seznámit vás s vašimi právy podle zákona o elektronických komunikacích č. 127/2005 Sb. a nařízení GDPR č. 2016/679. Jako uživatel našeho webu jste povinni se seznámit s těmito zásadami. V případě nejasností nebo dotazů nás kontaktujte na e-mailu: { pageData.attributes.email }
+                Naše společnost {pageData.attributes.name}, se sídlem na adrese {pageData.attributes.address}, IČO {pageData.attributes.vat} (dále jen &quot;my&quot;), využívá soubory cookie pro zajištění hladkého fungování a zlepšení našich internetových stránek. Cílem tohoto dokumentu, nazvaného &quot;Zásady používání souborů cookie&quot; (dále jen &quot;zásady&quot;), je poskytnout vám informace o tom, jak s těmito soubory nakládáme, včetně zpracování osobních údajů, a seznámit vás s vašimi právy podle zákona o elektronických komunikacích č. 127/2005 Sb. a nařízení GDPR č. 2016/679. Jako uživatel našeho webu jste povinni se seznámit s těmito zásadami. V případě nejasností nebo dotazů nás kontaktujte na e-mailu: {pageData.attributes.email}
             </p>
 
             <h2>Co rozumíme pod pojmem soubory cookie?</h2>
@@ -130,7 +130,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ pageData }) => (
             <h2>Aktualizace těchto zásad</h2>
 
             <p>
-                Tyto zásady nabývají účinnosti od { pageData.attributes.dateStart }. V případě potřeby si vyhrazujeme právo na jejich aktualizaci. Doporučujeme vám pravidelně kontrolovat nejnovější verzi těchto zásad na našem webu. Jakékoli změny vstupují v platnost okamžitě po zveřejnění.
+                Tyto zásady nabývají účinnosti od {pageData.attributes.dateStart}. V případě potřeby si vyhrazujeme právo na jejich aktualizaci. Doporučujeme vám pravidelně kontrolovat nejnovější verzi těchto zásad na našem webu. Jakékoli změny vstupují v platnost okamžitě po zveřejnění.
             </p>
         </article>
     </main>

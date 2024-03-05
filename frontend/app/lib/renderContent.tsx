@@ -42,7 +42,7 @@ const renderContent = (contentItems: ContentItem[]): ReactNode[] => {
         }
 
         if (item.type === 'image' && item.image) {
-            return <Image key={index} src={item.image.url} />
+            return <Image key={index} src={item.image.url} alt="image" />
         }
 
         if (item.type === 'list' && item.format) {
