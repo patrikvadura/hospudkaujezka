@@ -9,11 +9,13 @@ import Hero from "@/app/components/Hero";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { title, description, image } = seoHomepage.props;
-    const backendPath:string|undefined = process.env.NEXT_PUBLIC_API;
+    const siteURLString = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const siteURL = new URL(siteURLString);
 
     return {
         title: `${title}`,
         description: description,
+        metadataBase: siteURL,
         openGraph: {
             images: [
                 { url: image }
@@ -55,7 +57,7 @@ export default async function Home() {
                                                     removeWrapper
                                                     alt={post.attributes.title}
                                                     className="z-0 w-full h-full object-cover"
-                                                    src={backendPath + post.attributes.coverImage.data.attributes.url}
+                                                    src={post.attributes.coverImage.data.attributes.url}
                                                     isZoomed
                                                 />
                                             )}

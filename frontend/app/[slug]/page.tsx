@@ -12,15 +12,16 @@ interface ParamsProps {
 
 export async function generateMetadata(props: ParamsProps): Promise<Metadata> {
     const pageData = await getPageBySlug(props.params.slug, ['ogImage']);
-
-    const backendPath:string|undefined = process.env.NEXT_PUBLIC_API;
+    const siteURLString = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const siteURL = new URL(siteURLString);
 
     return {
         title: pageData.data[0].attributes.seoTitle || `${pageData.data[0].attributes.title} | Hospůdka u Ježka`,
         description: pageData.data[0].attributes.seoDescription,
+        metadataBase: siteURL,
         openGraph: {
             images: [
-                { url: backendPath + pageData.data[0].attributes.ogImage.data.attributes.url }
+                { url: pageData.data[0].attributes.ogImage.data.attributes.url }
             ]
         },
     }

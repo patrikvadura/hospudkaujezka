@@ -11,16 +11,17 @@ interface ParamsProps {
 }
 
 export async function generateMetadata(props: ParamsProps): Promise<Metadata> {
-    const postData = await getPost(props.params.slug);
-
-    const backendPath:string|undefined = process.env.NEXT_PUBLIC_API;
+    const postData = await getPost(props.params.slug, ['coverImage']);
+    const siteURLString = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const siteURL = new URL(siteURLString);
 
     return {
         title: `${postData.data[0].attributes.title} | Hospůdka u Ježka`,
         description: postData.data[0].attributes.excerpt,
+        metadataBase: siteURL,
         openGraph: {
             images: [
-                { url: backendPath + postData.data[0].attributes.coverImage }
+                { url: postData.data[0].attributes.coverImage.data.attributes.url }
             ]
         },
     }

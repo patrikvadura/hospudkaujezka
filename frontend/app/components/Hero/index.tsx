@@ -21,7 +21,7 @@ export default function Home() {
             y: 250,
             rotation: -30,
             scrollTrigger: {
-                trigger: '#body',
+                trigger: 'body',
                 start: '0',
                 end: '600px',
                 scrub: true,
@@ -38,7 +38,7 @@ export default function Home() {
             y: -150,
             rotation: 20,
             scrollTrigger: {
-                trigger: '#body',
+                trigger: 'body',
                 start: '0',
                 end: '600px',
                 scrub: true,
@@ -54,7 +54,6 @@ export default function Home() {
                 alt="Hospůdka U Ježka"
                 className="absolute top-0 left-0 z-0 w-full h-full object-cover !opacity-50 grayscale mix-blend-multiply"
                 src="/images/hero/hero_1.webp"
-                isZoomed
             />
 
             <div className="relative px-10 md:px-0 flex flex-col items-center justify-center h-full max-w-screen-lg mx-auto z-10">
