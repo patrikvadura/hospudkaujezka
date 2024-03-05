@@ -27,7 +27,17 @@ module.exports = ({ env }) => [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:1337',
+        'https://hospudkaujezka.netlify.app',
+        'https://hospudkaujezka-c52f6c3e7563.herokuapp.com'
+      ],
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
